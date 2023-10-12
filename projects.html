@@ -6,6 +6,7 @@
     <title>LDS Team</title>
 	<link rel="icon" href="img/ubuntu.svg">
 	<link rel="stylesheet" = href="css/style.css">
+	<script src="js/script.js"></script>
 </head>
 <body>
 	<div class="hlavicka">
@@ -16,6 +17,8 @@
 			<a href="error.html"><button class="button button1">Order</button></a>
 			<button class="button button2">Projects</button>
 			<a href="index.html"><button class="button button1">Home</button></a>
+			<img src="img/sun-regular.svg" onclick="darkmodeFun()" class="visible" value="light" id="light">
+			<img src="img/moon-regular.svg" onclick="darkmodeFun()" class="visible" value="dark" id="dark" style="display:none;">
 		</div>
 	</div>
 
@@ -43,6 +46,10 @@
 		</div>
 	</div>
 	<br>
+
+	<div class="acceptcookies">
+		<button class="button button1" id="acceptallcookies" onclick="acceptCookie()">Accept all cookies</button>
+	</div>
 
 
 	<div class="paticka">
