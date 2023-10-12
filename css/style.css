@@ -59,7 +59,29 @@
 body {
 	padding: 0px;
 	margin: 0px;
+	background-color: #FFFFFF;
+	color: black;
 }
+
+.dark-mode {
+	padding: 0px;
+	margin: 0px;
+	background-color: #161616;
+	color: #C5C5C5;
+}
+
+.visible {
+	width: 20px;
+	text-align: center;
+	margin-right: 4px;
+	margin-left: 16px;
+	cursor: pointer;
+}
+
+#light {
+	filter: invert(100%) sepia(16%) saturate(7463%) hue-rotate(222deg) brightness(119%) contrast(115%);
+}
+
 
 #logo {
 	filter: invert(100%) sepia(16%) saturate(7463%) hue-rotate(222deg) brightness(119%) contrast(115%);
