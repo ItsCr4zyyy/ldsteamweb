@@ -1,0 +1,161 @@
+.hlavicka {
+	background-color: #479669;
+	color: white;
+	font-family: sans-serif;
+	padding: 15px;
+	margin: 0px;
+    align-items: center;
+	display: flex;
+    flex-direction: row;
+	justify-content: space-between;
+}
+
+.left-section {
+  display: flex;
+  align-items: center;
+}
+
+.right-section {
+  display: flex;
+}
+
+.paticka {
+	background-color: #009246;
+	color: white;
+	font-family: sans-serif;
+	padding: 15px;
+	margin: 0px;
+	text-align: center;
+}
+
+.button {
+	background-color: #009246;
+	color: white;
+	padding: 12px 32px;
+	font-size: 16px;
+	margin: 4px 2px;
+	transition-duration: 0.4s;
+	cursor: pointer;
+	margin-left: auto;
+}
+
+.button1 {
+	background-color: white; 
+	color: black; 
+	border: 2px solid #009246;
+}
+
+.button1:hover {
+	background-color: #009246;
+	color: white;
+}
+
+.button2 {
+	background-color: #009246;
+	color: white;
+	border: 2px solid #009246;
+}
+
+body {
+	padding: 0px;
+	margin: 0px;
+}
+
+#logo {
+	filter: invert(100%) sepia(16%) saturate(7463%) hue-rotate(222deg) brightness(119%) contrast(115%);
+	width: 23px;
+	padding-right: 1px;
+	padding-left: 1px;
+	margin: 0px;
+}
+
+#socialnisitedole {
+	background-color: #009246;
+	width: 20px;
+	text-align: center;
+	padding-right: 2px;
+	padding-left: 2px;
+}
+
+#pc {
+	width: 400px;
+	margin: 0px;
+	padding: 0px;
+}
+
+#code {
+	width: 500px;
+	margin: 0px;
+	padding: 0px;
+}
+
+#mobile {
+	width: 400px;
+	margin: 0px;
+	padding: 0px;
+}
+
+
+.telo {
+	text-align: center;
+	padding: 0px;
+	margin: 50px;
+    display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.left {
+	text-align: center;
+	padding-left: 50px;
+	padding-right: 50px;
+}
+
+.center {
+	text-align: center;
+	padding-left: 60px;
+	padding-right: 60px;
+}
+
+.right {
+	text-align: center;
+	padding-left: 50px;
+	padding-right: 50px;
+}
+
+
+.text {
+	text-align: center;
+	width: 300px;
+	padding: 10px;
+	font-family: sans-serif;
+}
+
+.font {
+	font-family: sans-serif;
+}
+
+#projectsformat {
+	width: 400px;
+	margin: 0px;
+	padding: 0px;
+	border-radius: 30px;
+}
+
+.projectgo {
+	transition-duration: 0.4s;
+	cursor: pointer;
+	margin: 0px;
+	padding: 0px;
+	border: 3px solid #ccc;
+}
+
+.projectgo1 {
+	opacity: 0.7;
+	border: 3px solid #ccc;
+}
+
+.projectgo1:hover {
+	opacity: 1;
+	border: 3px solid #009246;
+}
