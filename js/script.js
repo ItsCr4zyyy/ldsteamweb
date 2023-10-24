@@ -2,67 +2,44 @@ function darkmodeFun() {
 	var element = document.body;
 	element.classList.toggle("dark-mode");
 	
-	if (document.getElementById("dark").style.display == "block") {
+	if (document.getElementById("light").style.display == "none") {
 		document.getElementById("dark").style.display = "none";
 		document.getElementById("light").style.display = "block";
-		if(accept != "" && accept != null) {
-			accept = "light";
-			setCookie("firstName", accept, 365);
+		if(localStorage.getItem('mode') == 'dark') {
+			localStorage.setItem('mode', 'light')
 		}
 	} else {
 		document.getElementById("dark").style.display = "block";
 		document.getElementById("light").style.display = "none";
-		if(accept != "" && accept != null) {
-			accept = "dark";
-			setCookie("firstName", accept, 365);
+		if(localStorage.getItem('mode') == 'light') {
+			localStorage.setItem('mode', 'dark')
 		}
     }
 }
 
 function acceptCookie() {
-	var accept = getCookie("firstName");
 	if (document.getElementById("dark").style.display == "block") {
-		accept = "dark";
+		localStorage.setItem('mode', 'dark')
+		document.getElementById("acceptallcookies").style.display = "none";
 	} else {
-		accept = "light";
+		localStorage.setItem('mode', 'light')
+		document.getElementById("acceptallcookies").style.display = "none";
 	}
-	setCookie("firstName", accept, 365);
 }
-
-function setCookie(name, value, daysToLive) {
-	var cookie = name + "=" + encodeURIComponent(value);
-	if(typeof daysToLive === "number") {
-		cookie += "; max-age=" + (daysToLive*24*60*60);
-		document.cookie = cookie;
-	}
-	document.getElementById("acceptallcookies").style.display = "none";
-}
-
-function getCookie(name) {
-	var cookieArr = document.cookie.split(";");
+   
+function checkLoad() {
     
-	for(var i = 0; i < cookieArr.length; i++) {
-		var cookiePair = cookieArr[i].split("=");
-		if(name == cookiePair[0].trim()) {
-			return decodeURIComponent(cookiePair[1]);
-		}
-	}
-	return null;
-}
-    
-function checkCookie() {
-	var accept = getCookie("firstName");
-    
-	if(accept == "dark") {
+	if(localStorage.getItem('mode') == 'dark') {
+		document.body.classList.toggle("dark-mode");
 		document.getElementById("acceptallcookies").style.display = "none";
 		document.getElementById("dark").style.display = "block";
 		document.getElementById("light").style.display = "none";
-		document.body.classList.toggle("dark-mode");
-	} else {
-		document.getElementById("acceptallcookies").style.display = "none";
+	}
+	if(localStorage.getItem('mode') == 'light') {
 		document.getElementById("dark").style.display = "none";
 		document.getElementById("light").style.display = "block";
+		document.getElementById("acceptallcookies").style.display = "none";
 	}
 }
 
-window.onload = checkCookie;
+window.onload = checkLoad;
